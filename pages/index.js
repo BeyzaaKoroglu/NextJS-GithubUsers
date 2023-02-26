@@ -2,8 +2,23 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import axios from 'axios';
 import UserListItem from '@/components/UserListItem';
+import Pagination from '@mui/material/Pagination';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useState } from 'react';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 export default function Home({ users }) {
+  const [list, setList] = useState(users.slice(0, 10));
+
+  const handlePageChange = (event, page) => {
+    setList(users.slice((page - 1) * 10, page * 10));
+  };
+
   return (
     <>
       <Head>
@@ -11,10 +26,16 @@ export default function Home({ users }) {
       </Head>
       <main className={styles.main}>
         <div className={styles.userList}>
-          {users.map((user, index) => (
+          {list.map((user, index) => (
             <UserListItem key={index} user={user} />
           ))}
         </div>
+        <ThemeProvider theme={darkTheme}>
+          <Pagination
+            count={Math.ceil(users.length / 10)}
+            onChange={handlePageChange}
+          />
+        </ThemeProvider>
       </main>
     </>
   );
