@@ -3,7 +3,6 @@ import axios from 'axios';
 import Link from 'next/link';
 
 const User = ({ user }) => {
-  console.log(user);
   return (
     <>
       <Link href="/">Go Back</Link>

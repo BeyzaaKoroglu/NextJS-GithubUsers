@@ -9,7 +9,7 @@
 }
 
 .userAvatar {
-  width: 250px;
+  width: 200px;
   margin-right: 20px;
   border-radius: 50%;
 }
@@ -38,4 +38,43 @@
 
 .userBio {
   font-size: 20px;
+}
+
+@media (max-width: 1023px) {
+  .main {
+    width: 75%;
+  }
+}
+
+@media (max-width: 820px) {
+  .main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    flex-direction: column;
+  }
+  .userAvatar {
+    margin: auto;
+  }
+}
+
+@media (max-width: 539px) {
+  .main {
+    width: 99%;
+  }
+  .userAvatar {
+    width: 150px;
+  }
+  .userName {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .userName span {
+    top: 5px;
+  }
 }

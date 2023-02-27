@@ -5,7 +5,7 @@
 
 .searchInput {
   height: 40px;
-  width: 500px;
+  width: 400px;
   border: 2px solid black;
   border-radius: 10px;
   outline: none;
@@ -19,4 +19,21 @@
   width: 100px;
   border: 2px solid black;
   border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .searchArea {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .searchInput {
+    width: 300px;
+  }
+}
+
+@media (max-width: 539px) {
+  .searchInput {
+    width: 250px;
+  }
 }

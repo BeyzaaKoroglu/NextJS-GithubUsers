@@ -3,3 +3,15 @@
   width: 60%;
   min-height: 100vh;
 }
+
+@media (max-width: 1023px) {
+  .main {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+}
