@@ -1,0 +1,22 @@
+.searchArea {
+  margin: 10px;
+  padding: 25px;
+}
+
+.searchInput {
+  height: 40px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.searchBtn {
+  background-color: rgb(0, 80, 0);
+  height: 40px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
