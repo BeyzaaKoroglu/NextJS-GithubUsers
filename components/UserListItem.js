@@ -4,10 +4,16 @@ import Link from 'next/link';
 const UserListItem = ({ user }) => {
   return (
     <div className={styles.user}>
-      <img className={styles.userAvatar} src={user.avatar_url} />
+      <Link href={`/${user.login}`}>
+        <img className={styles.userAvatar} src={user.avatar_url} />
+      </Link>
       <div>
-        <h1>{user.login}</h1>
-        <Link href={user.html_url}>View GitHub profile</Link>
+        <h1 className={styles.userName}>
+          <Link href={`/${user.login}`}>{user.login}</Link>
+        </h1>
+        <Link className={styles.link} href={user.html_url}>
+          View GitHub profile
+        </Link>
       </div>
     </div>
   );

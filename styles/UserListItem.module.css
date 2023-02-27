@@ -12,7 +12,11 @@
   margin-right: 20px;
 }
 
-.user a {
+.userName {
+  text-decoration: underline;
+}
+
+.user .link {
   position: relative;
   bottom: -40px;
   color: blue;

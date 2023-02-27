@@ -1,0 +1,41 @@
+.main {
+  margin: 25px auto;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.userAvatar {
+  width: 250px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.userName {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.userName span {
+  position: relative;
+  top: 13px;
+  padding-left: 10px;
+}
+
+.link {
+  text-decoration: underline;
+  color: blue;
+}
+
+.main p {
+  margin-top: 10px;
+}
+
+.userBio {
+  font-size: 20px;
+}
