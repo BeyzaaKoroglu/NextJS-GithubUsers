@@ -7,6 +7,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import Search from '@/components/Search';
 
+//Dark mode for Pagination
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -21,6 +22,7 @@ export default function Home(props) {
     setList(users.slice(0, 10));
   }, [users]);
 
+  //List new 10 users to show depending on page
   const handlePageChange = (event, page) => {
     setList(users.slice((page - 1) * 10, page * 10));
   };
@@ -50,6 +52,7 @@ export default function Home(props) {
   );
 }
 
+//Gets 100 users for initial page
 export const getServerSideProps = async () => {
   const data = await axios.get(`https://api.github.com/users?per_page=100`);
 

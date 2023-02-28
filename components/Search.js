@@ -1,6 +1,6 @@
 import styles from '@/styles/Search.module.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Search = ({ setUsers }) => {
   const [searchKey, setSearchKey] = useState('');
@@ -9,6 +9,7 @@ const Search = ({ setUsers }) => {
     setSearchKey(e.target.value);
   };
 
+  //Searching users using search key
   const handleClick = () => {
     if (searchKey !== '')
       axios

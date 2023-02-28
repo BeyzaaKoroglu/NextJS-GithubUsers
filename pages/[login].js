@@ -33,6 +33,7 @@ const User = ({ user }) => {
   );
 };
 
+//Gets specific user's information
 export const getServerSideProps = async (context) => {
   const { login } = context.query;
   const data = await axios.get(`https://api.github.com/users/${login}`);
